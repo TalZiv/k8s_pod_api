@@ -1,3 +1,4 @@
+
 # A demo of how to communicate with the Kubernetes API from within a pod running on the cluster
 
 ## Setup
@@ -22,14 +23,12 @@
 	      
 2 .Then we load the the service account token that was automaticlly mounted when the pod was created to an environment variable:
 ```KUBE_TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)```
-
 3. Next we can use the loaded token to authenticate against the Kubernetes API, The following example get the current pod info:
 ```curl -sSk -H "Authorization: Bearer $KUBE_TOKEN" https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_PORT_443_TCP_PORT/api/v1/namespaces/default/pods/$HOSTNAME | jq ```
-
 4. You can also delete this pod by running:
 ```curl -sSk -H "Authorization: Bearer $KUBE_TOKEN" https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_PORT_443_TCP_PORT/api/v1/namespaces/default/pods/$HOSTNAME -X DELETE| jq ```
 
-wait about 1 minute and the pod will terminate itself.
+**wait about 1 minute and the pod will terminate itself.**
 	
 ## Teardown:
 ```kubectl delete -f 1_service_Account.yaml
