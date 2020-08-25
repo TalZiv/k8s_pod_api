@@ -28,6 +28,7 @@
 ```curl -sSk -H "Authorization: Bearer $KUBE_TOKEN" https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_PORT_443_TCP_PORT/api/v1/namespaces/default/pods/$HOSTNAME | jq ```
 3. You can also delete this pod by running:
 ```curl -sSk -H "Authorization: Bearer $KUBE_TOKEN" https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_PORT_443_TCP_PORT/api/v1/namespaces/default/pods/$HOSTNAME -X DELETE| jq ```
+
 wait about 1 minute and the pod will terminate itself.
 	
 ## Teardown:
