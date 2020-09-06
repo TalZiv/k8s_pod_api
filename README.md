@@ -34,7 +34,10 @@ Run: ```kubectl exec -it busybox -- sh```
 **wait about 1 minute and the pod will terminate itself.**
 	
 ## Teardown:
-```kubectl delete -f 1_service_Account.yaml
-kubectl delete -f 2_role.yaml
-kubectl delete -f 3_role_binding.yaml
-kubectl delete -f 4_demo_pod.yaml```
+
+```	
+	kubectl delete -f 1_service_Account.yaml
+	kubectl delete -f 2_role.yaml
+	kubectl delete -f 3_role_binding.yaml
+	kubectl delete -f 4_demo_pod.yaml
+```
