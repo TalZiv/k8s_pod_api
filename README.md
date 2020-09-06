@@ -7,12 +7,13 @@
 ```kubectl apply -f 1_service_Account.yaml```
 2. Create a role which allows certin actions to performed this role includes delete so be carefull, Referance:
   https://kubernetes.io/docs/reference/access-authn-authz/rbac/ &     
-  https://kubernetes.io/docs/reference/access-authn-authz/authorization/	
-```kubectl apply -f 2_role.yaml```
-
-4. Create a role bind to binf the service account we created with the role above:
+  https://kubernetes.io/docs/reference/access-authn-authz/authorization/
+  
+  ```kubectl apply -f 2_role.yaml```
+  
+3. Create a role bind to binf the service account we created with the role above:
 	```kubectl apply -f 3_role_binding.yaml```
-5. Create a demo pod that uses the above service account for testing:
+4. Create a demo pod that uses the above service account for testing:
 	```kubectl apply -f 4_demo_pod.yaml```
 	
 ## Test API communication
