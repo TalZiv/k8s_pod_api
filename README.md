@@ -9,7 +9,7 @@
   https://kubernetes.io/docs/reference/access-authn-authz/rbac/ &     
   https://kubernetes.io/docs/reference/access-authn-authz/authorization/
   
-  ```kubectl apply -f 2_role.yaml```
+  	```kubectl apply -f 2_role.yaml```
   
 3. Create a role bind to binf the service account we created with the role above:
 	```kubectl apply -f 3_role_binding.yaml```
